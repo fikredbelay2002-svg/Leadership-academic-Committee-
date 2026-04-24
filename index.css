@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg: #030712; /* Deepest blue/black */
+  --fg: #f8fafc; /* Slate-50 */
+  --accent: #60a5fa; /* Sky blue/Icy accent */
+  --line: rgba(148, 163, 184, 0.1); /* Slate-400 */
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-glow-icy {
+    text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+  }
+  
+  .border-bento {
+    border: 1px solid rgba(148, 163, 184, 0.15);
+  }
+
+  .bg-bento-card {
+    background-color: rgba(15, 23, 42, 0.4);
+  }
+
+  .bg-grid {
+    background-image: radial-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .icy-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(96, 165, 250, 0.1) 0%, transparent 50%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
